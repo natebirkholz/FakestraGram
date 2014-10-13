@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43325B3519EC3CBF005FDF29 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43325B3419EC3CBF005FDF29 /* GalleryViewController.swift */; };
+		43325B3719EC424C005FDF29 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43325B3619EC424C005FDF29 /* GalleryCell.swift */; };
+		43325B3D19EC438B005FDF29 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43325B3819EC438B005FDF29 /* 5.jpg */; };
+		43325B3E19EC438B005FDF29 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43325B3919EC438B005FDF29 /* 4.jpg */; };
+		43325B3F19EC438B005FDF29 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43325B3A19EC438B005FDF29 /* 3.jpg */; };
+		43325B4019EC438B005FDF29 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43325B3B19EC438B005FDF29 /* 2.jpg */; };
+		43325B4119EC438B005FDF29 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43325B3C19EC438B005FDF29 /* 1.jpg */; };
+		43325B4319EC7909005FDF29 /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43325B4219EC7909005FDF29 /* CollectionSectionHeaderView.swift */; };
+		43325B4519EC791E005FDF29 /* CollectionSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43325B4419EC791E005FDF29 /* CollectionSectionFooterView.swift */; };
+		43D7788E19EC337100C7F029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D7788D19EC337100C7F029 /* AppDelegate.swift */; };
+		43D7789119EC337100C7F029 /* FakestraGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43D7788F19EC337100C7F029 /* FakestraGram.xcdatamodeld */; };
+		43D7789319EC337100C7F029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D7789219EC337100C7F029 /* ViewController.swift */; };
+		43D7789619EC337100C7F029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D7789419EC337100C7F029 /* Main.storyboard */; };
+		43D7789819EC337100C7F029 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D7789719EC337100C7F029 /* Images.xcassets */; };
+		43D7789B19EC337100C7F029 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D7789919EC337100C7F029 /* LaunchScreen.xib */; };
+		43D778A719EC337100C7F029 /* FakestraGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D778A619EC337100C7F029 /* FakestraGramTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43D778A119EC337100C7F029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43D7788019EC337000C7F029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D7788719EC337100C7F029;
+			remoteInfo = FakestraGram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43325B3419EC3CBF005FDF29 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		43325B3619EC424C005FDF29 /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		43325B3819EC438B005FDF29 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		43325B3919EC438B005FDF29 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		43325B3A19EC438B005FDF29 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		43325B3B19EC438B005FDF29 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		43325B3C19EC438B005FDF29 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		43325B4219EC7909005FDF29 /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
+		43325B4419EC791E005FDF29 /* CollectionSectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSectionFooterView.swift; sourceTree = "<group>"; };
+		43D7788819EC337100C7F029 /* FakestraGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakestraGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D7788C19EC337100C7F029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43D7788D19EC337100C7F029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43D7789019EC337100C7F029 /* FakestraGram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FakestraGram.xcdatamodel; sourceTree = "<group>"; };
+		43D7789219EC337100C7F029 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43D7789519EC337100C7F029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43D7789719EC337100C7F029 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43D7789A19EC337100C7F029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		43D778A019EC337100C7F029 /* FakestraGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakestraGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D778A519EC337100C7F029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43D778A619EC337100C7F029 /* FakestraGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakestraGramTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43D7788519EC337100C7F029 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D7789D19EC337100C7F029 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43D7787F19EC337000C7F029 = {
+			isa = PBXGroup;
+			children = (
+				43D7788A19EC337100C7F029 /* FakestraGram */,
+				43D778A319EC337100C7F029 /* FakestraGramTests */,
+				43D7788919EC337100C7F029 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43D7788919EC337100C7F029 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43D7788819EC337100C7F029 /* FakestraGram.app */,
+				43D778A019EC337100C7F029 /* FakestraGramTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43D7788A19EC337100C7F029 /* FakestraGram */ = {
+			isa = PBXGroup;
+			children = (
+				43D778B219EC349800C7F029 /* Control layer */,
+				43D778B119EC349100C7F029 /* View Layer */,
+				43D778B019EC348800C7F029 /* Model Layer */,
+				43D7788D19EC337100C7F029 /* AppDelegate.swift */,
+				43D7789719EC337100C7F029 /* Images.xcassets */,
+				43D7788F19EC337100C7F029 /* FakestraGram.xcdatamodeld */,
+				43D7788B19EC337100C7F029 /* Supporting Files */,
+			);
+			path = FakestraGram;
+			sourceTree = "<group>";
+		};
+		43D7788B19EC337100C7F029 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D7788C19EC337100C7F029 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43D778A319EC337100C7F029 /* FakestraGramTests */ = {
+			isa = PBXGroup;
+			children = (
+				43D778A619EC337100C7F029 /* FakestraGramTests.swift */,
+				43D778A419EC337100C7F029 /* Supporting Files */,
+			);
+			path = FakestraGramTests;
+			sourceTree = "<group>";
+		};
+		43D778A419EC337100C7F029 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D778A519EC337100C7F029 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43D778B019EC348800C7F029 /* Model Layer */ = {
+			isa = PBXGroup;
+			children = (
+				43325B3819EC438B005FDF29 /* 5.jpg */,
+				43325B3919EC438B005FDF29 /* 4.jpg */,
+				43325B3A19EC438B005FDF29 /* 3.jpg */,
+				43325B3B19EC438B005FDF29 /* 2.jpg */,
+				43325B3C19EC438B005FDF29 /* 1.jpg */,
+			);
+			name = "Model Layer";
+			sourceTree = "<group>";
+		};
+		43D778B119EC349100C7F029 /* View Layer */ = {
+			isa = PBXGroup;
+			children = (
+				43D7789419EC337100C7F029 /* Main.storyboard */,
+				43D7789919EC337100C7F029 /* LaunchScreen.xib */,
+				43325B3619EC424C005FDF29 /* GalleryCell.swift */,
+				43325B4219EC7909005FDF29 /* CollectionSectionHeaderView.swift */,
+				43325B4419EC791E005FDF29 /* CollectionSectionFooterView.swift */,
+			);
+			name = "View Layer";
+			sourceTree = "<group>";
+		};
+		43D778B219EC349800C7F029 /* Control layer */ = {
+			isa = PBXGroup;
+			children = (
+				43D7789219EC337100C7F029 /* ViewController.swift */,
+				43325B3419EC3CBF005FDF29 /* GalleryViewController.swift */,
+			);
+			name = "Control layer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43D7788719EC337100C7F029 /* FakestraGram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D778AA19EC337100C7F029 /* Build configuration list for PBXNativeTarget "FakestraGram" */;
+			buildPhases = (
+				43D7788419EC337100C7F029 /* Sources */,
+				43D7788519EC337100C7F029 /* Frameworks */,
+				43D7788619EC337100C7F029 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FakestraGram;
+			productName = FakestraGram;
+			productReference = 43D7788819EC337100C7F029 /* FakestraGram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43D7789F19EC337100C7F029 /* FakestraGramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D778AD19EC337100C7F029 /* Build configuration list for PBXNativeTarget "FakestraGramTests" */;
+			buildPhases = (
+				43D7789C19EC337100C7F029 /* Sources */,
+				43D7789D19EC337100C7F029 /* Frameworks */,
+				43D7789E19EC337100C7F029 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43D778A219EC337100C7F029 /* PBXTargetDependency */,
+			);
+			name = FakestraGramTests;
+			productName = FakestraGramTests;
+			productReference = 43D778A019EC337100C7F029 /* FakestraGramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43D7788019EC337000C7F029 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Nate Birkholz";
+				TargetAttributes = {
+					43D7788719EC337100C7F029 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					43D7789F19EC337100C7F029 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 43D7788719EC337100C7F029;
+					};
+				};
+			};
+			buildConfigurationList = 43D7788319EC337000C7F029 /* Build configuration list for PBXProject "FakestraGram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43D7787F19EC337000C7F029;
+			productRefGroup = 43D7788919EC337100C7F029 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43D7788719EC337100C7F029 /* FakestraGram */,
+				43D7789F19EC337100C7F029 /* FakestraGramTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43D7788619EC337100C7F029 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D7789619EC337100C7F029 /* Main.storyboard in Resources */,
+				43325B3D19EC438B005FDF29 /* 5.jpg in Resources */,
+				43325B4019EC438B005FDF29 /* 2.jpg in Resources */,
+				43D7789B19EC337100C7F029 /* LaunchScreen.xib in Resources */,
+				43325B3F19EC438B005FDF29 /* 3.jpg in Resources */,
+				43325B4119EC438B005FDF29 /* 1.jpg in Resources */,
+				43325B3E19EC438B005FDF29 /* 4.jpg in Resources */,
+				43D7789819EC337100C7F029 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D7789E19EC337100C7F029 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43D7788419EC337100C7F029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D7789319EC337100C7F029 /* ViewController.swift in Sources */,
+				43325B4519EC791E005FDF29 /* CollectionSectionFooterView.swift in Sources */,
+				43325B3719EC424C005FDF29 /* GalleryCell.swift in Sources */,
+				43325B3519EC3CBF005FDF29 /* GalleryViewController.swift in Sources */,
+				43D7788E19EC337100C7F029 /* AppDelegate.swift in Sources */,
+				43D7789119EC337100C7F029 /* FakestraGram.xcdatamodeld in Sources */,
+				43325B4319EC7909005FDF29 /* CollectionSectionHeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D7789C19EC337100C7F029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D778A719EC337100C7F029 /* FakestraGramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43D778A219EC337100C7F029 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D7788719EC337100C7F029 /* FakestraGram */;
+			targetProxy = 43D778A119EC337100C7F029 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43D7789419EC337100C7F029 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D7789519EC337100C7F029 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43D7789919EC337100C7F029 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D7789A19EC337100C7F029 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43D778A819EC337100C7F029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43D778A919EC337100C7F029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43D778AB19EC337100C7F029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FakestraGram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		43D778AC19EC337100C7F029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FakestraGram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		43D778AE19EC337100C7F029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FakestraGramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FakestraGram.app/FakestraGram";
+			};
+			name = Debug;
+		};
+		43D778AF19EC337100C7F029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FakestraGramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FakestraGram.app/FakestraGram";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43D7788319EC337000C7F029 /* Build configuration list for PBXProject "FakestraGram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D778A819EC337100C7F029 /* Debug */,
+				43D778A919EC337100C7F029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D778AA19EC337100C7F029 /* Build configuration list for PBXNativeTarget "FakestraGram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D778AB19EC337100C7F029 /* Debug */,
+				43D778AC19EC337100C7F029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D778AD19EC337100C7F029 /* Build configuration list for PBXNativeTarget "FakestraGramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D778AE19EC337100C7F029 /* Debug */,
+				43D778AF19EC337100C7F029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		43D7788F19EC337100C7F029 /* FakestraGram.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				43D7789019EC337100C7F029 /* FakestraGram.xcdatamodel */,
+			);
+			currentVersion = 43D7789019EC337100C7F029 /* FakestraGram.xcdatamodel */;
+			path = FakestraGram.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 43D7788019EC337000C7F029 /* Project object */;
+}
