@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EEE83EC9-8D16-4E68-B15B-EC09216002D5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FakestraGram</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>652A904EA989A888C6ED77A2AADDCD473E7B57BD</key>
+		<string>https://github.com/natebirkholz/FakestraGram.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FakestraGram/FakestraGram.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>652A904EA989A888C6ED77A2AADDCD473E7B57BD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/natebirkholz/FakestraGram.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>652A904EA989A888C6ED77A2AADDCD473E7B57BD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>652A904EA989A888C6ED77A2AADDCD473E7B57BD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FakestraGram</string>
+		</dict>
+	</array>
+</dict>
+</plist>

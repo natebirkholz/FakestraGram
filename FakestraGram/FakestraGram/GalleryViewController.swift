@@ -23,9 +23,16 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     var delegate : GalleryDelegate?
     var sectionHeader : String?
     var sectionFooter : String?
+    var sectionCount : Int?
+    
+    var randomTitle = ["Don't tase me", "Party in the back", "Truthiness", "Well-mannered","Underpants"]
+    
+    let downloadQueue = NSOperationQueue()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sectionCount = 0
         
         self.galleryView.dataSource = self
         self.galleryView.delegate = self
@@ -62,7 +69,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         
         if (kind == UICollectionElementKindSectionHeader) {
             header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "TITLE_HEADER", forIndexPath: indexPath) as? CollectionSectionHeaderView
-            if indexPath.section == 1 {
+            if indexPath.section == 0 {
                 header!.sectionHeaderLabel?.text = "Section numero Uno"
             } else {
                 header!.sectionHeaderLabel?.text = "Section numero Dos"
@@ -88,9 +95,21 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = galleryView.dequeueReusableCellWithReuseIdentifier("GALLERY_CELL", forIndexPath: indexPath) as GalleryCell
         
-        cell.galleryCellImage.image = self.imageArray[indexPath.row]
-        cell.imgLabel.text = self.imageArray[indexPath.row].debugDescription
+        if indexPath.section == 1 {
+            
+            cell.galleryCellImage.image = self.imageArray[indexPath.row]
+            
+            var randomNumber = Int(arc4random_uniform(5))
+            cell.imgLabel.text = self.randomTitle[randomNumber] as String
+            
+        } else {
+            cell.galleryCellImage.image = self.imageArray[indexPath.row]
+            
+            var randomNumber = Int(arc4random_uniform(5))
+            cell.imgLabel.text = self.randomTitle[randomNumber] as String
+        }
         
+
         return cell
     }
     
@@ -103,6 +122,9 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         
     }
     
+//    func fetchImage(completionHandler : (errorDescription : String?, imageFor : UIImage?) -> Void) {
+//        
+//    }
 
 
 

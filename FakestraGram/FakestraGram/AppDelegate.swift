@@ -13,10 +13,18 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var someValue: Bool?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.someValue = NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce")
+
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        
+        
         return true
     }
 
