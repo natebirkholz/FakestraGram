@@ -45,7 +45,7 @@ class FilterImage {
                 imageFilter.setValue(1.5, forKey: kCIInputEVKey)
                 
             case "CIGlassDistortion" :
-                var imageDistortBase = UIImage(named: "granite2", inBundle: NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
+                var imageDistortBase = UIImage(named: "glasstex", inBundle: NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
                 var imageFor = CIImage(image: imageDistortBase)
                 imageFilter.setValue(imageFor, forKey: "inputTexture")
                 imageFilter.setValue(300.0, forKey: kCIInputScaleKey)
@@ -54,6 +54,10 @@ class FilterImage {
                 println("default")
                 
             }
+            
+//            UIImage(CGImage: filteredImage.CGImage, scale: self.scale, orientation: UIImageOrientation.Right)
+//            TinasFu 21 hours ago
+
             
             imageFilter.setValue(image, forKey: kCIInputImageKey)
             

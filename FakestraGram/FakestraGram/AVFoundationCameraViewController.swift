@@ -29,6 +29,13 @@ class AVFoundationCameraViewController: UIViewController {
         previewLayer.frame = CGRectMake(0, 64, self.view.frame.size.width, CGFloat(self.view.frame.size.height * 0.6))
         self.view.layer.addSublayer(previewLayer)
         
+        var bounds = self.capturePreviewImageView.layer.bounds
+        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        previewLayer.bounds = bounds
+        previewLayer.position = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));
+        
+        self.capturePreviewImageView.layer.addSublayer(previewLayer)
+        
         var device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         var error : NSError?
         var input = AVCaptureDeviceInput.deviceInputWithDevice(device, error: &error) as AVCaptureDeviceInput!
@@ -48,15 +55,7 @@ class AVFoundationCameraViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
-//        var orientation : AVCaptureVideoOrientation?
-//        
-//        AVCaptureVideoOrientation.LandscapeRight   frame = self.view.bounds;
-//        if (_captureVideoPreviewLayer.connection.supportsVideoOrientation) {
-//            _captureVideoPreviewLayer.connection.videoOrientation = [self interfaceOrientationToVideoOrientation:[UIApplication sharedApplication].statusBarOrientation];
-//        }
-//    }
+
     
 
     @IBAction func capturePressed(sender: AnyObject) {

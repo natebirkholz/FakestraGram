@@ -11,6 +11,8 @@ import CoreImage
 import OpenGLES
 import CoreData
 import Photos
+import Social
+import Accounts
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, GalleryDelegate, UICollectionViewDataSource, UICollectionViewDelegate, FrameworkDelegate {
@@ -35,8 +37,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var imageToFilter : FilterImage?
     var originalImage : UIImage?
     var imageMain : UIImage?
+    var twitterAccount : ACAccount?
     
     let imageQueue = NSOperationQueue()
+    
     
 
     override func viewDidLoad() {
@@ -64,8 +68,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var myEAGLContext = EAGLContext(API: EAGLRenderingAPI.OpenGLES2)
         self.ciContext = CIContext(EAGLContext: myEAGLContext, options: options)
         
+        self.imageView.layer.masksToBounds = true
+        self.imageView.layer.cornerRadius = 30
         
-
+        
         
         
         
@@ -183,11 +189,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.presentViewController(imageTaker, animated: true, completion: nil)
             
             }
+        
         let photosAction = UIAlertAction(title: "Photos Framework", style: .Default) { (action) -> Void in
             self.performSegueWithIdentifier("FRAMEWORK_SEGUE", sender: self)
         }
-        let foundationAction = UIAlertAction(title: "AV FOundation", style: .Default) { (action) -> Void in
+        let foundationAction = UIAlertAction(title: "AV Foundation", style: .Default) { (action) -> Void in
             self.performSegueWithIdentifier("FOUNDATION_SEGUE", sender: self)
+        }
+        let saveAction = UIAlertAction(title: "Save Image", style: .Default) { (action) -> Void in
+//            UIImageWriteToSavedPhotosAlbum(self.imageMain, nil, nil, nil)
+            
+            PHPhotoLibrary.sharedPhotoLibrary().performChanges({ () -> Void in
+                let changeRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(self.imageMain)
+                }, completionHandler: { (succeeded, error: NSError?) -> Void in
+                    if succeeded {
+                        let alertController = UIAlertController(title: "Success", message: "Saved to photos album.", preferredStyle: UIAlertControllerStyle.Alert)
+                        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action) -> Void in
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                        }
+                        
+                        
+                        alertController.addAction(okAction)
+                        self.presentViewController(alertController, animated: true) { () -> Void in
+                            
+                        }
+                    }
+            })
+            
+            
+        }
+        let tweetAction = UIAlertAction(title: "Tweet Image", style: .Default) { (action) -> Void in
+            self.composeForTwitter()
+//            self.composeForFacebook()
         }
         
         alertController.addAction(galleryAction)
@@ -199,6 +232,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         alertController.addAction(imageChooseAction)
         alertController.addAction(filterAction)
         alertController.addAction(photosAction)
+        if self.originalImage != nil {
+            alertController.addAction(saveAction)
+            alertController.addAction(tweetAction)
+
+        }
         
         
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -374,6 +412,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         }
+    
+    func composeForTwitter() {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            var tweetFor = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweetFor.setInitialText("Check out my fake pic!")
+            tweetFor.addImage(self.imageMain)
+            self.presentViewController(tweetFor, animated: true, completion: nil)
+        }
+    }
+    
+    func composeForFacebook() {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            var tweetFor = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            tweetFor.setInitialText("Check out my fake pic!")
+            tweetFor.addImage(self.imageMain)
+            self.presentViewController(tweetFor, animated: true, completion: nil)
+        }
+    }
     
 
 

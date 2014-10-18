@@ -47,7 +47,7 @@ class FilterThumbnail {
                     imageFilter.setValue(1.5, forKey: kCIInputEVKey)
                     
                 case "CIGlassDistortion" :
-                    var imageDistortBase = UIImage(named: "glass6", inBundle: NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
+                    var imageDistortBase = UIImage(named: "glasstex", inBundle: NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
                     var imageFor = CIImage(image: imageDistortBase)
                     imageFilter.setValue(imageFor, forKey: "inputTexture")
                     imageFilter.setValue(200.0, forKey: kCIInputScaleKey)
