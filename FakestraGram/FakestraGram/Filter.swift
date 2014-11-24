@@ -14,4 +14,4 @@ class Filter: NSManagedObject {
     @NSManaged var name: String
     @NSManaged var favorited: NSNumber
 
-}
+} // End

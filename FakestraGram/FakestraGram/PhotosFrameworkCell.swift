@@ -11,4 +11,4 @@ import UIKit
 class PhotosFrameworkCell: UICollectionViewCell {
     @IBOutlet weak var outGoing: UIImageView!
     
-}
+} // End

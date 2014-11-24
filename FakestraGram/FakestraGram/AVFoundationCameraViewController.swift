@@ -15,10 +15,19 @@ import QuartzCore
 
 class AVFoundationCameraViewController: UIViewController {
 
+// ---------------------------------------
+// MARK: Properties
+// ---------------------------------------
+
+
     @IBOutlet weak var capturePreviewImageView: UIImageView!
     
     var stillImageOutput = AVCaptureStillImageOutput()
     var delegate : FrameworkDelegate?
+
+// ---------------------------------------
+// MARK: Lifecycle
+// ---------------------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +64,10 @@ class AVFoundationCameraViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+  // ---------------------------------------
+  // MARK: Capture
+  // ---------------------------------------
     
-
     @IBAction func capturePressed(sender: AnyObject) {
         
         var videoConnection : AVCaptureConnection?
@@ -80,12 +90,10 @@ class AVFoundationCameraViewController: UIViewController {
             var data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
             var image = UIImage(data: data)
             self.capturePreviewImageView.image = image
-            println(image.size)
-            
-            self.delegate?.didPullAPicture(image)
+            println(image?.size)
+            self.delegate?.didPullAPicture(image!)
         })
-        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-}
+} // End

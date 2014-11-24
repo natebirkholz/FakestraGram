@@ -18,26 +18,17 @@ class SeedCoreData {
     }
     
     func seedCoreData() {
-        
         let filterFilters = ["CISepiaTone", "CIGaussianBlur", "CIPixellate", "CIGammaAdjust", "CIExposureAdjust", "CIPhotoEffectChrome", "CIPhotoEffectInstant","CIPhotoEffectMono", "CIPhotoEffectNoir", "CIPhotoEffectTonal", "CIPhotoEffectTransfer", "CIGlassDistortion"]
-        
-        //
-
         for item in filterFilters {
             var filterEntity = NSEntityDescription.insertNewObjectForEntityForName("Filter", inManagedObjectContext: self.managedObjectContext) as Filter
             filterEntity.name = item
-            
         }
-        
-        
-        
         var error : NSError?
         self.managedObjectContext?.save(&error)
         if error != nil {
             println(error?.localizedDescription)
         }
     }
-    
-    
-}
+
+} // End
 

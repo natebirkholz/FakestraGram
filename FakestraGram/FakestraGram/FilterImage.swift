@@ -29,48 +29,34 @@ class FilterImage {
             var image = CIImage(image: self.originalImage)
             var imageFilter = CIFilter(name: self.filterName)
             imageFilter.setDefaults()
-            
             switch imageFilter.name() {
             case "CIPixellate" :
                 imageFilter.setValue(32.0, forKey: kCIInputScaleKey)
-                
             case "CIGaussianBlur" :
                 imageFilter.setValue(20.0, forKey: kCIInputRadiusKey)
                 println("gblur")
-                
             case "CIGammaAdjust" :
                 imageFilter.setValue(2.5, forKey: "inputPower" )
-                
             case "CIExposureAdjust" :
                 imageFilter.setValue(1.5, forKey: kCIInputEVKey)
-                
             case "CIGlassDistortion" :
                 var imageDistortBase = UIImage(named: "glasstex", inBundle: NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
                 var imageFor = CIImage(image: imageDistortBase)
                 imageFilter.setValue(imageFor, forKey: "inputTexture")
                 imageFilter.setValue(300.0, forKey: kCIInputScaleKey)
-                
             default :
                 println("default")
-                
             }
-            
-//            UIImage(CGImage: filteredImage.CGImage, scale: self.scale, orientation: UIImageOrientation.Right)
-//            TinasFu 21 hours ago
-
-            
             imageFilter.setValue(image, forKey: kCIInputImageKey)
-            
             var result = imageFilter.valueForKey(kCIOutputImageKey) as CIImage
             var extent = result.extent()
             var imageRef = self.gpuContext.createCGImage(result, fromRect: extent)
-            
             self.filter = imageFilter
             self.filteredImage = UIImage(CGImage: imageRef)
-            
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 completionHandler(imageFiltered: self.filteredImage!, imageOriginal: self.originalImage)
             })
         })
     }
-}
+
+} // End

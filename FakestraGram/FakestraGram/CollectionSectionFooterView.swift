@@ -12,7 +12,5 @@ class CollectionSectionFooterView: UICollectionReusableView {
     
     
     @IBOutlet weak var collectionFooterLabel: UILabel!
-    
-    
-        
-}
+
+} // End

@@ -35,50 +35,32 @@ class FilterThumbnail {
                 switch imageFilter.name() {
                 case "CIPixellate" :
                     imageFilter.setValue(3.0, forKey: kCIInputScaleKey)
-                    
                 case "CIGaussianBlur" :
                     imageFilter.setValue(2.0, forKey: kCIInputRadiusKey)
                     println("gbkur")
-                    
                 case "CIGammaAdjust" :
                     imageFilter.setValue(2.5, forKey: "inputPower" )
-                    
                 case "CIExposureAdjust" :
                     imageFilter.setValue(1.5, forKey: kCIInputEVKey)
-                    
                 case "CIGlassDistortion" :
                     var imageDistortBase = UIImage(named: "glasstex", inBundle: NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
                     var imageFor = CIImage(image: imageDistortBase)
                     imageFilter.setValue(imageFor, forKey: "inputTexture")
                     imageFilter.setValue(200.0, forKey: kCIInputScaleKey)
-                    
                 default :
                     println("default")
-                    
                 }
             }
-            
-            
-            
-//            if imageFilter.name() == "CIPixellate" {
-//                imageFilter.setValue(3.0, forKey: kCIInputScaleKey)
-//            } else if imageFilter.name() == "CIGaussianBlur" {
-//                imageFilter.setValue(2.0, forKey: kCIInputRadiusKey)
-//            }
-            
             var result = imageFilter.valueForKey(kCIOutputImageKey) as CIImage
             var extent = result.extent()
             var imageRef = self.gpuContext.createCGImage(result, fromRect: extent)
-            
             self.filter = imageFilter
             self.filteredThumbnail = UIImage(CGImage: imageRef)
-            
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 completionHandler(image: self.filteredThumbnail!)
             })
         })
     }
-    
-    
-}
+
+} // End
 

@@ -12,13 +12,5 @@ import Foundation
 class CollectionSectionHeaderView: UICollectionReusableView {
     
     @IBOutlet weak var sectionHeaderLabel: UILabel?
-    
-    
-    
-    
-    
-    
-    
-    
-        
-}
+
+} // End
